@@ -1,0 +1,177 @@
+:root {
+    --operator-color: #c8c8c4;
+    --numbers-color: #edede8;
+    --equal-sign-color: #57adf9;
+    --clear-color: red;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 1em;
+}
+
+.display {
+    display: grid;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    justify-content: end;
+    align-content: end;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1em;
+}
+
+.equals {
+    display: grid;
+    grid-column: 4;
+    grid-row: 2/6;
+    align-content: center;
+    background-color: var(--equal-sign-color);
+    border: none;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.plus {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--operator-color);
+    cursor: pointer;
+}
+
+.minus {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--operator-color);
+    cursor: pointer;
+}
+
+.multiply {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--operator-color);
+    cursor: pointer;
+}
+
+.divide {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--operator-color);
+    cursor: pointer;
+}
+
+.one {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.two {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.three {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.four {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.five {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.six {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.seven {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.eight {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.nine {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.zero {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.decimal {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--numbers-color);
+    cursor: pointer;
+}
+
+.clear {
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--clear-color);
+    color: white;
+    cursor: pointer;
+}
