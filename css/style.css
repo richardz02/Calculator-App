@@ -1,177 +1,58 @@
-:root {
-    --operator-color: #c8c8c4;
-    --numbers-color: #edede8;
-    --equal-sign-color: #57adf9;
-    --clear-color: red;
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Georgia, sans-serif;
+    font-weight: normal;
 }
 
-
-* {
-    margin: 0;
+body {
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    background: linear-gradient(to right, #4DF93F, #FDC947);
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    grid-gap: 1em;
-}
-
-.display {
-    display: grid;
-    width: 200px;
-    height: 50px;
-    font-size: 30px;
-    justify-content: end;
-    align-content: end;
-}
-
-.numbers {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-gap: 1em;
-}
-
-.equals {
-    display: grid;
-    grid-column: 4;
-    grid-row: 2/6;
+    justify-content: center;
     align-content: center;
-    background-color: var(--equal-sign-color);
-    border: none;
-    border-radius: 2px;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.container > button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current {
     color: white;
-    cursor: pointer;
-}
-
-.plus {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--operator-color);
-    cursor: pointer;
-}
-
-.minus {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--operator-color);
-    cursor: pointer;
-}
-
-.multiply {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--operator-color);
-    cursor: pointer;
-}
-
-.divide {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--operator-color);
-    cursor: pointer;
-}
-
-.one {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.two {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.three {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.four {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.five {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.six {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.seven {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.eight {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.nine {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.zero {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.decimal {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--numbers-color);
-    cursor: pointer;
-}
-
-.clear {
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: var(--clear-color);
-    color: white;
-    cursor: pointer;
+    font-size: 2.5rem;
 }
